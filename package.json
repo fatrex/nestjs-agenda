@@ -3,6 +3,11 @@
   "version": "0.0.1",
   "description": "agenda module for Nestjs",
   "main": "dist/index.js",
+  "files": [
+    "dist",
+    "index.js",
+    "index.d.ts"
+  ],
   "scripts": {
     "build": "rm -rf dist && tsc -p tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -25,14 +30,15 @@
     "url": "https://github.com/fatrex/nestjs-agenda/issues"
   },
   "homepage": "https://github.com/fatrex/nestjs-agenda#readme",
-  "dependencies": {
+  "peerDependencies": {
     "@nestjs/common": "^9.4.0",
     "@nestjs/core": "^9.4.0",
     "@types/agenda": "^4.1.0",
-    "agenda": "^5.0.0",
-    "reflect-metadata": "^0.1.13"
+    "agenda": "^5.0.0"
   },
   "devDependencies": {
+    "prettier": "2.8.8",
+    "reflect-metadata": "^0.1.13",
     "release-it": "^15.10.3",
     "typescript": "^5.0.4"
   }

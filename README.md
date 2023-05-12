@@ -1,31 +1,38 @@
 # nestjs-agenda
+
 [Agenda](https://github.com/agenda/agenda) module for [Nestjs](https://github.com/nestjs/nest)
 
 Nestjs version `^9.4.0`  
 Agenda version `^5.0.0`
 
 # Note
+
 Original forked from https://github.com/hanFengSan/nestjs-agenda
 
 # Installation
+
 ```
 npm install @fatrex/nestjs-agenda
 ```
 
 # Usage
+
 **1. Import `AgendaModule`:**
 
-*Sync register*:
+_Sync register_:
+
 ```TypeScript
 import { AgendaModule } from 'nestjs-agenda';
 
 @Module({
-  imports: [AgendaModule.register({ db: { address: 'mongodb://xxxxx' }})], // Same as configuring an agenda  
+  imports: [AgendaModule.register({ db: { address: 'mongodb://xxxxx' }})], // Same as configuring an agenda
   providers: [...],
 })
 export class FooModule {}
 ```
-*Async register*:
+
+_Async register_:
+
 ```TypeScript
 import { AgendaModule } from 'nestjs-agenda';
 
@@ -43,7 +50,9 @@ import { AgendaModule } from 'nestjs-agenda';
 })
 export class FooModule {}
 ```
+
 **2. Inject `AgendaService` (AgendaService is a instance of Agenda):**
+
 ```TypeScript
 import { Injectable } from '@nestjs/common';
 import { AgendaService } from 'nestjs-agenda';
