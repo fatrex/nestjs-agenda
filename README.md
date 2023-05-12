@@ -1,11 +1,15 @@
 # nestjs-agenda
 [Agenda](https://github.com/agenda/agenda) module for [Nestjs](https://github.com/nestjs/nest)
 
-Agenda version is `^3.1.0`
+Nestjs version `^9.4.0`  
+Agenda version `^5.0.0`
+
+# Note
+Original forked from https://github.com/hanFengSan/nestjs-agenda
 
 # Installation
 ```
-npm install nestjs-agenda
+npm install @fatrex/nestjs-agenda
 ```
 
 # Usage
