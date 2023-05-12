@@ -1,6 +1,6 @@
 {
   "name": "@fatrex/nestjs-agenda",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "agenda module for Nestjs",
   "main": "dist/index.js",
   "files": [
