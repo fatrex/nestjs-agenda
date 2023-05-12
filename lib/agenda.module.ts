@@ -1,11 +1,7 @@
-import { Module, DynamicModule, Provider, Inject } from '@nestjs/common';
+import { Module, DynamicModule, Provider } from '@nestjs/common';
 import { AgendaModuleOptions, AgendaModuleAsyncOptions, AgendaOptionsFactory } from './interfaces';
 import { AGENDA_MODULE_OPTIONS } from './agenda.constants';
-import * as Agenda from 'agenda';
-
-function createAgendaProvider(options: AgendaModuleOptions): any[] {
-  return [{ provide: AGENDA_MODULE_OPTIONS, useValue: options || {} }];
-}
+import { Agenda } from 'agenda'
 
 export class AgendaService extends Agenda {}
 
@@ -13,7 +9,7 @@ export class AgendaService extends Agenda {}
   providers: [
     {
       provide: AgendaService,
-      useFactory: async (options) => {
+      useFactory: async (options: AgendaModuleOptions) => {
         const agenda = new Agenda(options);
         await agenda.start();
         return agenda;
@@ -27,7 +23,9 @@ export class AgendaModule {
   static register(options: AgendaModuleOptions): DynamicModule {
     return {
       module: AgendaModule,
-      providers: createAgendaProvider(options),
+      providers: [
+        { provide: AGENDA_MODULE_OPTIONS, useValue: options}
+      ]
     };
   }
 
