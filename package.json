@@ -1,7 +1,7 @@
 {
-  "name": "nestjs-agenda",
-  "version": "2.0.0",
-  "description": "agenda for nest.js",
+  "name": "@fatrex/nestjs-agenda",
+  "version": "0.0.1",
+  "description": "agenda module for Nestjs",
   "main": "dist/index.js",
   "scripts": {
     "build": "rm -rf dist && tsc -p tsconfig.json",
@@ -9,27 +9,29 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/hanFengSan/nestjs-agenda.git"
+    "url": "git+ssh://git@github.com/fatrex/nestjs-agenda.git"
   },
   "keywords": [
     "nestjs",
     "agenda"
   ],
-  "author": "Alex Chen",
+  "contributors": [
+    "Alex Chen",
+    "Daniele Lenares"
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hanFengSan/nestjs-agenda/issues"
+    "url": "https://github.com/fatrex/nestjs-agenda/issues"
   },
-  "homepage": "https://github.com/hanFengSan/nestjs-agenda#readme",
+  "homepage": "https://github.com/fatrex/nestjs-agenda#readme",
   "dependencies": {
-    "@nestjs/common": "^6.6.7",
-    "@nestjs/core": "^6.6.7",
-    "@types/agenda": "^2.0.5",
-    "agenda": "^3.1.0",
-    "reflect-metadata": "^0.1.13",
-    "rxjs": "^6.5.3"
+    "@nestjs/common": "^9.4.0",
+    "@nestjs/core": "^9.4.0",
+    "@types/agenda": "^4.1.0",
+    "agenda": "^5.0.0",
+    "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
-    "typescript": "^3.6.3"
+    "typescript": "^5.0.4"
   }
 }
